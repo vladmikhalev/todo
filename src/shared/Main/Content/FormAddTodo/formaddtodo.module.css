@@ -1,0 +1,45 @@
+.form {
+  margin-bottom: 40px;
+}
+
+.inputAddTask {
+  width: 100%;
+  max-width: 370px;
+  margin-right: 20px;
+  padding: 19px 15px;
+  background-color: #F4F4F4;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  color: #333333;
+  outline: none;
+  border: 1px solid #737373;
+  border-radius: 5px;
+}
+
+.inputAddTask::placeholder {
+  color: #999999;
+}
+
+
+.btnAdd {
+  padding: 19px 50px;
+  background-color: #F4F4F4;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  border: 1px solid #737373;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btnAdd:hover {
+  background-color: #ADAAA4;
+}
+
+@media all and (max-width: 576px) {
+  .inputAddTask {
+    margin-bottom: 25px;
+  }
+}
