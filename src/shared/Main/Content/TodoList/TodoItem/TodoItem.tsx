@@ -15,7 +15,6 @@ export function TodoItem({ todo, inputWidth }: ITodoItemProps) {
   const [title, setTitle] = React.useState(todo.title);
   const [isEdit, setIsEdit] = React.useState(false);
   const dispatch = useAppDispatch();
-  console.log(todo.isDone);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
