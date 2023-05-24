@@ -1,13 +1,14 @@
 .form {
   margin-bottom: 40px;
+  display: flex;
 }
 
 .inputAddTask {
   width: 100%;
-  max-width: 370px;
+  max-width: 700px;
   margin-right: 20px;
   padding: 19px 15px;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
   font-weight: 300;
   font-size: 16px;
   line-height: 17px;
@@ -24,9 +25,9 @@
 
 .btnAdd {
   padding: 19px 50px;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 17px;
   text-align: center;
   border: 1px solid #737373;
@@ -38,8 +39,17 @@
   background-color: #ADAAA4;
 }
 
-@media all and (max-width: 576px) {
+@media all and (max-width: 763px) {
+  .btnAdd {
+    padding: 11px 15px;
+  }
+}
+
+@media all and (max-width: 410px) {
+  .form {
+    flex-direction: column;
+  }
   .inputAddTask {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }

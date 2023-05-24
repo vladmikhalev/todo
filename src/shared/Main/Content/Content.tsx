@@ -4,11 +4,13 @@ import { FormAddTodo } from './FormAddTodo';
 import { TodoList } from './TodoList';
 
 export function Content() {
+  const [inputWidth, setInputWidth] = React.useState(0);
+
   return (
     <section>
       <div className={styles.container}>
-        <FormAddTodo />
-        <TodoList/>
+        <FormAddTodo setInputWidth={setInputWidth} />
+        <TodoList inputWidth={inputWidth} />
       </div>
     </section>
   );
