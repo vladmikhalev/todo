@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Приложение заметок TODO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение для заметок позволяет легко создавать, редактировать, отмечать как выполненное и удалять заметки.
+
+<img width="574" alt="Screenshot 2023-05-24 at 14 12 05" src="https://github.com/vladmikhalev/todo/assets/107835280/5806f02a-6b1b-4b65-b2b8-864b89030c16">
+
 
 ## Available Scripts
 
