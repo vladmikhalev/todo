@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeTodo } from '../../../../../../store/todoSlice';
+import { removeTodo, toggleDone } from '../../../../../../store/todoSlice';
+import { IconDone } from '../../../../../icons';
 import styles from './btngroup.module.css';
 
 interface IBtnGroupProps {
@@ -20,7 +21,10 @@ export function BtnGroup({ id, setIsEdit }: IBtnGroupProps) {
     if (result === true) {
       dispatch(removeTodo({ id: id }))
     }
-    
+  }
+
+  function handleDone() {
+    dispatch(toggleDone({ id: id }))
   }
 
 
@@ -28,6 +32,9 @@ export function BtnGroup({ id, setIsEdit }: IBtnGroupProps) {
     <div className={styles.btnGroup}>
       <button onClick={handleEdit} className={styles.btnEdit}>/</button>
       <button onClick={handleDelete} className={styles.btnDelete}>X</button>
+      <button onClick={handleDone} className={styles.btnDone}>
+        <IconDone/>
+      </button>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 .btnGroup {
   margin-left: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .btnEdit {
@@ -10,12 +12,26 @@
 }
 
 .btnDelete {
+  margin-right: 25px;
   font-weight: 400;
   font-size: 30px;
-  line-height: 17px;  
+  line-height: 17px;
+}
+
+.btnDone svg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+}
+
+.btnDone:hover svg {
+  border-radius: 100%;
+  outline: 1px solid #00C853;
 }
 
 
-.btnEdit:hover, .btnDelete:hover {
+.btnEdit:hover,
+.btnDelete:hover {
   font-weight: 600;
 }

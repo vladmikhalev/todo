@@ -15,6 +15,7 @@ export function TodoItem({ todo, inputWidth }: ITodoItemProps) {
   const [title, setTitle] = React.useState(todo.title);
   const [isEdit, setIsEdit] = React.useState(false);
   const dispatch = useAppDispatch();
+  console.log(todo.isDone);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -53,7 +54,7 @@ export function TodoItem({ todo, inputWidth }: ITodoItemProps) {
         ? (
           <FormEdit inputWidth={inputWidth}  handleSubmit={handleSubmit} title={title} handleChange={handleChange} />
         ) : (
-            <div className={styles.todo} style={{ width: inputWidth }}>{todo.title}</div>
+            <div className={styles.todo} style={{ width: inputWidth, backgroundColor: todo.isDone ? '#c3e6cb' : '#DDDCDA' }}>{todo.title}</div>
         )}
         {isHovered && <BtnGroup setIsEdit={setIsEdit} id={todo.id} />}
 

@@ -4,6 +4,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export type Todo = {
   id: string;
   title: string;
+  isDone: boolean;
 };
 
 type TodoState = {
@@ -39,6 +40,7 @@ const todoSlice = createSlice({
       state.list.push({
         id: action.payload.id,
         title: action.payload.title,
+        isDone: false,
       });
     },
     removeTodo(state, action: PayloadAction<IPayloadId>) {
@@ -50,8 +52,14 @@ const todoSlice = createSlice({
         targetTodo.title = action.payload.title;
       }
     },
+    toggleDone(state, action: PayloadAction<IPayloadId>) {
+      const targetTodo = state.list.find(todo => todo.id === action.payload.id);
+      if (targetTodo) {
+        targetTodo.isDone = !targetTodo.isDone;
+      }
+    },
   },
 });
 
-export const { addTodo, removeTodo, editTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, editTodo, toggleDone } = todoSlice.actions;
 export default todoSlice.reducer;
