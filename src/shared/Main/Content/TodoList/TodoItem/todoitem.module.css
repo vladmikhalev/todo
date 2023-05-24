@@ -1,0 +1,28 @@
+.itemTodo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.itemTodo:hover .todo {
+  outline: 1px solid #737373;
+}
+
+.todo {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #DDDCDA;
+  border-radius: 5px;
+  text-align: left;
+}
+
+@media all and (max-width: 410px) {
+  .itemTodo {
+    flex-direction: column;
+  }
+
+  .todo {
+    margin-bottom: 15px;
+  }
+}

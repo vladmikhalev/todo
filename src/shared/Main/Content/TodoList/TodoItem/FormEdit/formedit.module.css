@@ -1,0 +1,10 @@
+.editInput {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #FAFAFA;
+  outline: 1px solid #737373;
+  border: none;
+  border-radius: 5px;
+}

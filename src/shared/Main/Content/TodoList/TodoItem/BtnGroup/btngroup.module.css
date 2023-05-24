@@ -1,0 +1,21 @@
+.btnGroup {
+  margin-left: 30px;
+}
+
+.btnEdit {
+  margin-right: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 17px;
+}
+
+.btnDelete {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 17px;  
+}
+
+
+.btnEdit:hover, .btnDelete:hover {
+  font-weight: 600;
+}
